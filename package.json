@@ -1,0 +1,27 @@
+{
+  "name": "responsive-image-cropper",
+  "version": "1.0.0",
+  "description": "Sitecore Marketplace custom field for responsive image cropping with focal point and breakpoints.",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@sitecore-marketplace-sdk/client": "^0.2.2",
+    "@sitecore-marketplace-sdk/xmc": "^0.2.2",
+    "next": "^15.4.6",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-easy-crop": "^5.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.16.11",
+    "@types/react": "19.1.9",
+    "@types/react-dom": "19.1.5",
+    "eslint": "^9.39.1",
+    "eslint-config-next": "^16.0.3",
+    "typescript": "5.7.3"
+  }
+}
