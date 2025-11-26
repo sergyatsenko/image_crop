@@ -48,7 +48,7 @@ export async function searchMedia(
     }
   `;
 
-  const response: any = await client.query("xmc.graphql.authoring", {
+  const response: any = await client.query("xmc.graphql.authoring" as any, {
     params: {
       query,
       variables: { rootPath, searchTerm, language },

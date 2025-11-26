@@ -1,7 +1,6 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import type { ApplicationContext } from "@sitecore-marketplace-sdk/client";
 import { useMarketplaceClient } from "../../src/hooks/useMarketplaceClient";
 import { useResponsiveCropState } from "../../src/hooks/useResponsiveCropState";
 import { BreakpointTabs } from "../../src/components/BreakpointTabs";
@@ -13,7 +12,6 @@ import type { BreakpointKey, ResponsiveCropValue } from "../../src/types/crop";
 
 export default function CustomFieldPage() {
   const { client, isInitialized, error, isLoading } = useMarketplaceClient();
-  const [appContext, setAppContext] = useState<ApplicationContext | null>(null);
   const [language, setLanguage] = useState<string>("en");
   const [isHydrating, setIsHydrating] = useState<boolean>(true);
   const [loadedValue, setLoadedValue] = useState<ResponsiveCropValue>();
@@ -52,7 +50,6 @@ export default function CustomFieldPage() {
         setStatusMessage("Loading context...");
         const ctxResponse: any = await client.query("application.context");
         const ctx = ctxResponse?.data ?? ctxResponse;
-        setAppContext(ctx ?? null);
         const lang =
           ctx?.language ??
           ctx?.languages?.current ??
