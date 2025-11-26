@@ -24,6 +24,7 @@
 - XMC package (Authoring/Preview GraphQL): https://doc.sitecore.com/mp/en/developers/sdk/latest/sitecore-marketplace-sdk/marketplace-sdk-packages.html
 - Inspiration for normalized focal points: https://amplience.com/developers/docs/user-guides/assets/point-of-interest/
 
+
 ## Data model (field value)
 ```ts
 type FocalPoint = { x: number; y: number }; // 0..1
